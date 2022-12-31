@@ -1,0 +1,109 @@
+<html lang="ru"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minesweeper game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="mine.js" charset="utf-8"></script>
+    <style>
+
+#bombs, #flags {
+    margin-top: 20px;
+    margin-left: 60px;
+    font-size: 40px;
+}
+
+#board {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #dcd6bc;
+    margin-left: 50px;
+    margin-top: 20px;
+    border: 10px solid #dcd6bc;
+    user-select: none;
+}
+
+#board div {
+    height: 40px;
+    width: 40px;
+    font-size: 25px;
+    text-align: center;
+    vertical-align: center;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+#board .bomb.opened {
+    background-color: red;
+    border: 5px solid;
+    border-color: #f5f3eb #bab7a9 #bab7a9 #fffd9b;
+    padding-top: 0px;
+    font-size: 22px;
+}
+
+#board .bomb.closed {
+    font-size: 22px;
+}
+
+#board .flag {
+    font-size: 22px;
+}
+
+.closed {
+    border: 5px solid;
+    border-color: #f5f3eb #bab7a9 #bab7a9 #fffd9b
+}
+
+.opened {
+    background-color: #cecab7;
+    border: 2px solid;
+    border-color: #9c998d;
+    padding-top: 5px;
+}
+
+[bombsAround = '1'] {
+    color: blue;
+}
+
+[bombsAround = "2"] {
+    color: green;
+}
+
+[bombsAround = "3"] {
+    color: red;
+}
+
+[bombsAround = "4"] {
+    color: darkblue;
+}
+
+[bombsAround = "5"] {
+    color: darkred;
+}
+
+[bombsAround = "6"] {
+    color: darkgreen;
+}
+
+[bombsAround = "7"] {
+    color: brown;
+}
+
+[bombsAround = "8"] {
+    color: magenta;
+}
+
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="board"></div>
+        <div id="bombs"></div>
+        <div id="flags"></div>
+    </div>
+
+</body></html>
